@@ -41,6 +41,7 @@ jobs:
       - name: Run Tests
         # env:
         #   DATABASE_URL: postgres://postgres:@localhost:5432/databasename
+        #   RAILS_MASTER_KEY: ${{secrets.RAILS_MASTER_KEY}}
         run: |
           bundle exec rails test
 
@@ -49,6 +50,7 @@ jobs:
         with:
           name: code-coverage
           path: coverage/
+
   security:
     runs-on: ubuntu-latest
     steps:
