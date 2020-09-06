@@ -27,7 +27,7 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          sudo apt install -yqq libpq-dev
+          # sudo apt install -yqq libpq-dev
           gem install bundler
 
       - name: Install Gems
@@ -40,6 +40,6 @@ jobs:
 
       - name: Run Tests
         env:
-          DATABASE_URL: postgres://postgres:@localhost:5432/databasename
+          # DATABASE_URL: postgres://postgres:@localhost:5432/databasename
         run: |
           bundle exec rails test
